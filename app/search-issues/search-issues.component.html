@@ -1,0 +1,18 @@
+<div>
+ <input placeholder="URLRepository" #urlrepository>
+ <button (click)="search(urlrepository.value) ">Search</button>
+</div>
+
+<p style="color:red;" *ngIf="error_text">{{ error_text }}</p>
+<div>
+<div *ngFor="let issue of results">
+    <div>
+      <a href="{{issue.repository_url}}">{{ issue.title }}</a>
+    </div>
+  </div>
+</div>
+
+
+
+
+ 
